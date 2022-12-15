@@ -33,9 +33,7 @@ class Out:
         Args:
             output (str): 標準出力
         """
-        if output == "\n":
-            self.__outputs.append("")
-        else:
+        if output != "\n":
             self.__outputs.append(output)
 
     @property
