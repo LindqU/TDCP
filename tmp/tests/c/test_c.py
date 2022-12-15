@@ -1,6 +1,6 @@
 """hogehoge"""
 import pytest
-from problems.c import main
+from task.c import main
 from utility.mock_std import In, Out
 
 
@@ -9,8 +9,7 @@ def test_case1(monkeypatch: pytest.MonkeyPatch):
     stdout: object = Out("tests/c/output/output1.txt")
     monkeypatch.setattr("sys.stdin.readline", stdin.pop)
     monkeypatch.setattr("sys.stdout.write", stdout.add)
-    res = main()
-    print(res)
+    main()
     assert stdout.outputs == stdout.validation
 
 
@@ -19,8 +18,7 @@ def test_case2(monkeypatch: pytest.MonkeyPatch):
     stdout: object = Out("tests/c/output/output2.txt")
     monkeypatch.setattr("sys.stdin.readline", stdin.pop)
     monkeypatch.setattr("sys.stdout.write", stdout.add)
-    res = main()
-    print(res)
+    main()
     assert stdout.outputs == stdout.validation
 
 
@@ -29,6 +27,5 @@ def test_case3(monkeypatch: pytest.MonkeyPatch):
     stdout: object = Out("tests/c/output/output2.txt")
     monkeypatch.setattr("sys.stdin.readline", stdin.pop)
     monkeypatch.setattr("sys.stdout.write", stdout.add)
-    res = main()
-    print(res)
+    main()
     assert stdout.outputs == stdout.validation
