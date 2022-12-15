@@ -1,17 +1,23 @@
 """validationのファイルを読み込む関数"""
+from logging import getLogger, INFO
+
+# setting logging
+logger = getLogger(__name__)
+logger.setLevel(INFO)
 
 
 def read_file(file_path) -> list:
-    """_summary_
+    """file_read module
 
     Args:
-        file_path (_type_): _description_
+        file_path (_type_): input_file path
 
     Returns:
-        list: _description_
-    """    
+        list: file_values
+    """
     file_values = list()
     with open(file_path, encoding="utf-8") as file:
-        for line in file.readline():
-            file_values.append(line.strip())
+        ex_outputs = file.read().splitlines()
+        logger.info("ex outputs : %s", ex_outputs)
+        file_values.append(ex_outputs)
     return file_values

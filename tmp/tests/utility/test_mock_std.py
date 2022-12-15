@@ -3,7 +3,7 @@ from utility.mock_std import In, Out
 
 
 def test_mock_input():
-    file_path = "tests/utility/test.txt"
+    file_path = "tmp/tests/utility/test.txt"
     stdin = In(file_path)
 
     res = list()
@@ -15,8 +15,8 @@ def test_mock_input():
 
 
 def test_mock_out():
-    file_path = "tests/utility/test.txt"
+    file_path = "tmp/tests/utility/test.txt"
 
-    stdout = Out()
-    stdout.add("hogehoge")
-    assert stdout.outputs == ["hogehoge"]
+    stdout = Out(file_path)
+    stdout.add(["4", "1 4", "4 3", "4 10", "8 3"])
+    assert stdout.validation == stdout.outputs
