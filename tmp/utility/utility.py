@@ -7,17 +7,16 @@ logger.setLevel(INFO)
 
 
 def read_file(file_path) -> list:
-    """file_read module
+    """_summary_
 
     Args:
-        file_path (_type_): input_file path
+        file_path (_type_): _description_
 
     Returns:
-        list: file_values
+        list: _description_
     """
-    file_values = list()
     with open(file_path, encoding="utf-8") as file:
         ex_outputs = file.read().splitlines()
         logger.info("ex outputs : %s", ex_outputs)
-        file_values.append(ex_outputs)
-    return file_values
+
+    return ex_outputs
