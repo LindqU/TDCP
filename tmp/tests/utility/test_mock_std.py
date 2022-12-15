@@ -1,5 +1,4 @@
 """hogehoge"""
-import os
 from utility.mock_std import In, Out
 
 
