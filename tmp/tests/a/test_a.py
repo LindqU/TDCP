@@ -24,7 +24,7 @@ def test_case2(monkeypatch: pytest.MonkeyPatch):
 
 def test_case3(monkeypatch: pytest.MonkeyPatch):
     stdin: object = In("tests/a/input/input3.txt")
-    stdout: object = Out("tests/a/output/output2.txt")
+    stdout: object = Out("tests/a/output/output3.txt")
     monkeypatch.setattr("sys.stdin.readline", stdin.pop)
     monkeypatch.setattr("sys.stdout.write", stdout.add)
     main()
